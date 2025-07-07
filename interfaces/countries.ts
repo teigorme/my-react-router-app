@@ -1,8 +1,9 @@
-
 export interface Countries {
   flags: Flags;
   name: Name;
+  capital: string[];
   region: string;
+  subregion: string;
   population: number;
 }
 

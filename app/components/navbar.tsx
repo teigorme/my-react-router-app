@@ -2,8 +2,8 @@ import { NavLink } from "react-router";
 
 export default function Navbar() {
     return (
-        <header className="w-full px-3 text-gray-700 bg-white shadow-sm">
-            <div className="container flex flex-col md:flex-row items-center justify-between py-5 mx-auto ">
+        <header className="w-full text-gray-700 bg-white shadow-sm">
+            <div className="container flex flex-col md:flex-row items-center justify-between py-5 px-6">
                 <div className="flex flex-col md:flex-row items-center">
                     <NavLink to="/" className="flex items-center mb-5 md:mb-0">
                         <span className="text-xl font-black text-gray-900 select-none">

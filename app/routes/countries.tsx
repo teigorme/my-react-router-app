@@ -5,9 +5,9 @@ import type { Countries } from "interfaces/countries";
 import { baseURL } from "constants/base-url";
 
 export async function clientLoader(): Promise<Countries[]> {
-    const res = await fetch(baseURL);
-    const data = await res.json();
-    return data;
+    const res = await fetch(baseURL + "/all?fields=name,flags,region,population");
+    return await res.json();
+
 }
 
 export default function Countries({ loaderData }: Route.ComponentProps) {
@@ -51,10 +51,10 @@ export default function Countries({ loaderData }: Route.ComponentProps) {
             {filteredCountries.length === 0 ? (
                 <div> No countries match your filters. </div>
             ) : (
-                <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    {filteredCountries.map((country: any) => (
+                <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                    {filteredCountries.map((country) => (
                         <li
-                            key={country.cca3}
+                            key={country.name.common}
                             className="bg-white border border-gray-200 rounded-xl p-4 shadow hover:shadow-lg transition"
                         >
                             <Link
