@@ -26,7 +26,7 @@ export default function Home() {
                   Discover details about every country around the world – from
                   capitals to regions!
                 </p>
-                <div className="flex flex-col sm:flex-row sm:space-x-4">
+                <div className="flex flex-col sm:flex-row sm:space-x-4 gap-y-3 mb-4">
                   <Link
                     to="/countries"
                     className="flex items-center justify-center px-6 py-3 text-lg text-white bg-indigo-600 rounded-md hover:bg-indigo-700"
