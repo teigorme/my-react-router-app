@@ -48,7 +48,7 @@ export default function Home() {
                   </Link>
                   <Link
                     to="/about"
-                    className="flex items-center px-6 py-3 text-gray-500 bg-gray-100 rounded-md hover:bg-gray-200 hover:text-gray-600"
+                    className="flex items-center justify-center px-6 py-3 text-lg text-gray-500 bg-gray-100 rounded-md hover:bg-gray-200 hover:text-gray-600"
                   >
                     Learn More
                   </Link>
